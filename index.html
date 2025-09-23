@@ -1,1 +1,126 @@
-歡迎來到gigi的網站
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GiGi的作品集</title>
+    <style>
+        body {
+            font-family: 'Press Start 2P', 'Noto Sans JP', '游ゴシック', 'Yu Gothic', 'MS Gothic', sans-serif;
+            background: linear-gradient(135deg, #f7e3fd 0%, #e1c1f7 100%);
+            margin: 0; padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+            background: rgba(255,255,255,0.98);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 4px 24px rgba(180,120,220,0.18);
+            border: 2px solid #e0b2f7;
+            position: relative;
+        }
+        h1 {
+            font-family: 'Press Start 2P', 'Noto Sans JP', '游ゴシック', 'Yu Gothic', 'MS Gothic', sans-serif;
+            font-size: 2em;
+            color: #b64bd6;
+            letter-spacing: 0.12em;
+            text-shadow: 2px 2px 0 #f7e3fd, 4px 4px 12px #e0b2f7;
+            margin-bottom: 0.5em;
+        }
+        p {
+            font-size: 1.1em;
+            color: #a85fc6;
+            letter-spacing: 0.08em;
+            font-family: 'Noto Sans JP', '游ゴシック', 'Yu Gothic', 'MS Gothic', sans-serif;
+        }
+        .pixel-border {
+            border: 0;
+            border-top: 6px dotted #e0b2f7;
+            margin: 32px 0;
+        }
+        .game-illust {
+            position: absolute;
+            bottom: -40px; left: 50%;
+            transform: translateX(-50%);
+            width: 220px; height: 120px;
+            background: url('https://cdn.pixabay.com/photo/2017/01/31/13/14/pixel-art-2020272_1280.png') no-repeat center/contain;
+            opacity: 0.88;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .cinnamoroll, .rabbit, .lace-bow, .lace-bow-right, .blue-illust {
+            display: none;
+        }
+        .pixel-star {
+            position: absolute;
+            top: -32px; left: 32px;
+            width: 48px; height: 48px;
+            background: url('https://cdn.pixabay.com/photo/2013/07/12/15/55/star-150613_1280.png') no-repeat center/contain;
+            opacity: 0.92;
+            pointer-events: none;
+        }
+        .pixel-star-right {
+            position: absolute;
+            top: -32px; right: 32px;
+            width: 48px; height: 48px;
+            background: url('https://cdn.pixabay.com/photo/2013/07/12/15/55/star-150613_1280.png') no-repeat center/contain;
+            opacity: 0.92;
+            transform: scaleX(-1);
+            pointer-events: none;
+        }
+        .pixel-heart {
+            position: absolute;
+            bottom: -32px; left: 48px;
+            width: 40px; height: 40px;
+            background: url('https://cdn.pixabay.com/photo/2017/01/31/13/14/pixel-heart-2020272_1280.png') no-repeat center/contain;
+            opacity: 0.9;
+            pointer-events: none;
+        }
+        .pixel-heart-right {
+            position: absolute;
+            bottom: -32px; right: 48px;
+            width: 40px; height: 40px;
+            background: url('https://cdn.pixabay.com/photo/2017/01/31/13/14/pixel-heart-2020272_1280.png') no-repeat center/contain;
+            opacity: 0.9;
+            transform: scaleX(-1);
+            pointer-events: none;
+        }
+        .photo-gallery {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+        .gallery-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(180,120,220,0.18);
+            border: 2px solid #e0b2f7;
+            background: #f7e3fd;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="game-illust"></div>
+        <div class="pixel-star"></div>
+        <div class="pixel-star-right"></div>
+        <div class="pixel-heart"></div>
+        <div class="pixel-heart-right"></div>
+        <h1>GiGi的作品集</h1>
+        <hr class="pixel-border">
+        <p>這是以電子遊戲粉紫色系設計的 index.html 範例頁面。</p>
+        <div class="photo-gallery">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="遊戲主題1" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="遊戲主題2" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="遊戲主題3" class="gallery-img">
+        </div>
+    </div>
+</body>
+</html>
