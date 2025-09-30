@@ -3,124 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GiGi的作品集</title>
+    <title>0930-網站設計與賞析</title>
     <style>
-        body {
-            font-family: 'Press Start 2P', 'Noto Sans JP', '游ゴシック', 'Yu Gothic', 'MS Gothic', sans-serif;
-            background: linear-gradient(135deg, #f7e3fd 0%, #e1c1f7 100%);
-            margin: 0; padding: 0;
-        }
-        .container {
-            max-width: 600px;
-            margin: 60px auto;
-            background: rgba(255,255,255,0.98);
-            padding: 40px;
-            border-radius: 24px;
-            box-shadow: 0 4px 24px rgba(180,120,220,0.18);
-            border: 2px solid #e0b2f7;
-            position: relative;
-        }
-        h1 {
-            font-family: 'Press Start 2P', 'Noto Sans JP', '游ゴシック', 'Yu Gothic', 'MS Gothic', sans-serif;
-            font-size: 2em;
-            color: #b64bd6;
-            letter-spacing: 0.12em;
-            text-shadow: 2px 2px 0 #f7e3fd, 4px 4px 12px #e0b2f7;
-            margin-bottom: 0.5em;
-        }
-        p {
-            font-size: 1.1em;
-            color: #a85fc6;
-            letter-spacing: 0.08em;
-            font-family: 'Noto Sans JP', '游ゴシック', 'Yu Gothic', 'MS Gothic', sans-serif;
-        }
-        .pixel-border {
-            border: 0;
-            border-top: 6px dotted #e0b2f7;
-            margin: 32px 0;
-        }
-        .game-illust {
-            position: absolute;
-            bottom: -40px; left: 50%;
-            transform: translateX(-50%);
-            width: 220px; height: 120px;
-            background: url('https://cdn.pixabay.com/photo/2017/01/31/13/14/pixel-art-2020272_1280.png') no-repeat center/contain;
-            opacity: 0.88;
-            pointer-events: none;
-            z-index: 1;
-        }
-        .cinnamoroll, .rabbit, .lace-bow, .lace-bow-right, .blue-illust {
-            display: none;
-        }
-        .pixel-star {
-            position: absolute;
-            top: -32px; left: 32px;
-            width: 48px; height: 48px;
-            background: url('https://cdn.pixabay.com/photo/2013/07/12/15/55/star-150613_1280.png') no-repeat center/contain;
-            opacity: 0.92;
-            pointer-events: none;
-        }
-        .pixel-star-right {
-            position: absolute;
-            top: -32px; right: 32px;
-            width: 48px; height: 48px;
-            background: url('https://cdn.pixabay.com/photo/2013/07/12/15/55/star-150613_1280.png') no-repeat center/contain;
-            opacity: 0.92;
-            transform: scaleX(-1);
-            pointer-events: none;
-        }
-        .pixel-heart {
-            position: absolute;
-            bottom: -32px; left: 48px;
-            width: 40px; height: 40px;
-            background: url('https://cdn.pixabay.com/photo/2017/01/31/13/14/pixel-heart-2020272_1280.png') no-repeat center/contain;
-            opacity: 0.9;
-            pointer-events: none;
-        }
-        .pixel-heart-right {
-            position: absolute;
-            bottom: -32px; right: 48px;
-            width: 40px; height: 40px;
-            background: url('https://cdn.pixabay.com/photo/2017/01/31/13/14/pixel-heart-2020272_1280.png') no-repeat center/contain;
-            opacity: 0.9;
-            transform: scaleX(-1);
-            pointer-events: none;
-        }
-        .photo-gallery {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            margin-top: 32px;
-            flex-wrap: wrap;
-        }
-        .gallery-img {
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(180,120,220,0.18);
-            border: 2px solid #e0b2f7;
-            background: #f7e3fd;
-        }
-        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f9f9f9; }
+        h1 { color: #2c3e50; }
+        p { color: #555; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 10px; text-align: left; border: 1px solid #ddd; }
+        th { background-color: #f2f2f2; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="game-illust"></div>
-        <div class="pixel-star"></div>
-        <div class="pixel-star-right"></div>
-        <div class="pixel-heart"></div>
-        <div class="pixel-heart-right"></div>
-        <h1>GiGi的作品集</h1>
-        <hr class="pixel-border">
-        <p>這是以電子遊戲粉紫色系設計的 index.html 範例頁面。</p>
-        <div class="photo-gallery">
-            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="遊戲主題1" class="gallery-img">
-            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="遊戲主題2" class="gallery-img">
-            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="遊戲主題3" class="gallery-img">
-        </div>
-    </div>
+    <h1>唐詩三百首</h1>
+    <table border="1" cellpadding="10" style="border-collapse: collapse; background: #fff;">
+        <tr>
+            <th>詩人</th>
+            <th>詩名</th>
+            <th>內容</th>
+            <th>圖片</th>
+        </tr>
+        <tr>
+            <td>李白</td>
+            <td>黃鶴樓送孟浩然之廣陵</td>
+            <td>
+                故人西辭黃鶴樓，煙花三月下揚州。<br>
+                孤帆遠影碧空盡，惟見長江天際流。
+            </td>
+            <td><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="黃鶴樓送孟浩然之廣陵意境" width="80"></td>
+        </tr>
+        <tr>
+            <td>柳宗元</td>
+            <td>江雪</td>
+            <td>
+                千山鳥飛絕，萬徑人蹤滅。<br>
+                孤舟蓑笠翁，獨釣寒江雪。
+            </td>
+            <td><img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="江雪意境" width="80"></td>
+        </tr>
+        <tr>
+            <td>李白</td>
+            <td>早發白帝城 (下江陵)</td>
+            <td>
+                朝辭白帝彩雲間，千里江陵一日還。<br>
+                兩岸猿聲啼不住，輕舟已過萬重山。
+            </td>
+            <td><img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=400&q=80" alt="早發白帝城意境" width="80"></td>
+        </tr>
+        <tr>
+            <td>王維</td>
+            <td>相思</td>
+            <td>
+                紅豆生南國，春來發幾枝？<br>
+                願君多采擷，此物最相思。
+            </td>
+            <td><img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="相思意境" width="80"></td>
+        </tr>
+        <tr>
+            <td>李白</td>
+            <td>靜夜思</td>
+            <td>
+                床前明月光，疑是地上霜。<br>
+                舉頭望明月，低頭思故鄉。
+            </td>
+            <td><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80" alt="靜夜思意境" width="80"></td>
+        </tr>
+        <tr>
+            <td>李白</td>
+            <td>獨坐敬亭山</td>
+            <td>
+                眾鳥高飛盡，孤雲獨去閒。<br>
+                相看兩不厭，只有敬亭山。
+            </td>
+            <td><img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=400&q=80" alt="敬亭山意境" width="80"></td>
+        </tr>
+        <tr>
+            <td>李白</td>
+            <td>登金陵鳳凰臺</td>
+            <td>
+                鳳凰臺上鳳凰遊，鳳去臺空江自流。<br>
+                吳宮花草埋幽徑，晉代衣冠成古丘。<br>
+                三山半茖青天外，二水中分白鷺洲。<br>
+                總為浮雲能蔽日，長安不見使人愁。
+            </td>
+            <td><img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=400&q=80" alt="鳳凰臺意境" width="80"></td>
+        </tr>
+        <tr>
+            <td>李商隱</td>
+            <td>登樂遊原</td>
+            <td>
+                向晚意不適，驅車登古原。<br>
+                夕陽無限好，只是近黃昏。
+            </td>
+            <td><img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="樂遊原意境" width="80"></td>
+        </tr>
+        <tr>
+            <td>王之渙</td>
+            <td>涼州詞</td>
+            <td>
+                黃河遠上白雲間，一片孤城萬仞山。<br>
+                羌笛何須怨楊柳？春風不度玉門關。
+            </td>
+            <td><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="涼州詞意境" width="80"></td>
+        </tr>
+        <tr>
+            <td>杜甫</td>
+            <td>江南逢李龜年</td>
+            <td>
+                岐王宅裡尋常見，崔九堂前幾度聞。<br>
+                正是江南好風景，落花時節又逢君。
+            </td>
+            <td><img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="江南逢李龜年意境" width="80"></td>
+        </tr>
+        <tr>
+            <td>李商隱</td>
+            <td>夜雨寄北</td>
+            <td>
+                君問歸期未有期，巴山夜雨漲秋池。<br>
+                何當共翦西窗燭，卻話巴山夜雨時。
+            </td>
+            <td><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80" alt="夜雨寄北意境" width="80"></td>
+        </tr>
+    </table>
 </body>
 </html>
