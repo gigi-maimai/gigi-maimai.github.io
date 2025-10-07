@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>表格 × 圖片練習｜Starter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>表格 × 圖片練習</h1>
+  <p class="subtitle">目標：熟悉 <span class="code">&lt;table&gt;</span>、合併儲存格（colspan/rowspan）、替代文字（alt）、圖片大小與標題對齊。</p>
+
+  <div class="note">
+    <strong>任務說明：</strong>請把下方「旅行相片一覽」做成一個整齊的圖文表格。<br>
+    1) 每張圖片下方要有標題（地點＋主題）；2) 第一列放分類標籤；3) 用 <span class="code">colspan</span> 或 <span class="code">rowspan</span> 做出至少一次的合併；4) 為每張圖片寫合適的 <span class="code">alt</span>；5) 讓表格在手機上也能水平滾動查看。
+  </div>
+
+  <div style="overflow-x:auto;">
+    <table border="1" style="min-width:600px; border-collapse:collapse;">
+      <thead>
+        <tr>
+          <th>分類</th>
+          <th>縮圖</th>
+          <th>標題與描述</th>
+          <th>拍攝日期</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2">城市風景</td>
+          <td>
+            <a href="images/river_sunset.png" target="_blank">
+              <img src="pic1.jpg" alt="傍晚河岸與城市天際線倒影" width="480" height="320">
+            </a>
+          </td>
+          <td>
+            <strong>河畔夕照</strong><br>
+            金色陽光灑在河面，倒映城市天際線。
+          </td>
+          <td>2025-09-01</td>
+        </tr>
+        <tr>
+          <td>
+            <a href="images/night_street.png" target="_blank">
+              <img src="pic2.webp" alt="傍晚河岸與城市天際線倒影" width="480" height="320">
+            </a>
+          </td>
+          <td>
+            <strong>夜色小徑</strong><br>
+            街角咖啡店透出溫暖光暈。
+          </td>
+          <td>2025-09-02</td>
+        </tr>
+        <tr>
+          <td colspan="4" style="text-align:center; font-weight:bold; background:#f0f0f0;">
+            海邊旅行
+          </td>
+        </tr>
+        <tr>
+          <td>自然風景</td>
+          <td>
+            <a href="images/beach_morning.png" target="_blank">
+              <img src="pic3.webp" alt="傍晚河岸與城市天際線倒影" width="480" height="320">
+            </a>
+          </td>
+          <td>
+            <strong>清晨海浪</strong><br>
+            第一道陽光照亮浪花與沙粒。
+          </td>
+          <td>2025-09-03</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    小提示：圖片請使用相對路徑 <span class="code">images/檔名.png</span>；若要更換圖片，把新檔案放進 <span class="code">images</span> 資料夾並更新 <span class="code">src</span> 與 <span class="code">alt</span>。
+  </div>
+</body>
+</html>
