@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GiGi&rsquo;s Artwork</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fbfbfb;
+      --card:#ffffff;
+      --accent:#f3eef6;
+      --text:#2b2b2b;
+      --muted:#7a7a7a;
+      --lace:#fffafc;
+      --glass: rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: 'Noto Sans TC', system-ui, -apple-system, "Segoe UI", Roboto, 'Helvetica Neue', Arial;
+      background:linear-gradient(180deg,var(--bg) 0%, #ffffff 50%);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:40px 20px;
+    }
+
+    /* 中央容器與蕾絲裝飾 */
+    .portfolio-wrap{
+      max-width:1100px;
+      margin:0 auto;
+      position:relative;
+      padding:48px;
+      background:var(--card);
+      border-radius:14px;
+      box-shadow:0 10px 30px rgba(30,30,30,0.06);
+      overflow:hidden;
+    }
+    /* In intense dissatisfaction in the world */
+    .portfolio-wrap::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      background-image:
+        radial-gradient(circle at 5% 5%, rgba(0,0,0,0.02) 0 2px, transparent 3px),
+        radial-gradient(circle at 95% 95%, rgba(0,0,0,0.02) 0 2px, transparent 3px);
+      mix-blend-mode:overlay;
+      opacity:0.9;
+    }
+
+    header{
+      text-align:center;
+      margin-bottom:30px;
+    }
+    h1{
+      font-family:'Playfair Display', serif;
+      font-size:36px;
+      margin:6px 0 4px;
+      letter-spacing:0.6px;
+    }
+    .tagline{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* 四區塊網格 */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:20px;
+    }
+    @media (max-width:720px){
+      .grid{grid-template-columns:1fr}
+      .portfolio-wrap{padding:28px}
+      h1{font-size:28px}
+    }
+
+    .card{
+      background:linear-gradient(180deg,var(--card), var(--accent));
+      border-radius:12px;
+      padding:20px;
+      min-height:180px;
+      position:relative;
+      overflow:hidden;
+      border:1px solid rgba(0,0,0,0.03);
+      box-shadow:0 6px 18px rgba(30,30,30,0.04);
+      transition:transform .35s ease, box-shadow .35s ease;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(30,30,30,0.08)}
+
+    .lace-edge{
+      position:absolute;
+      top:0;left:0;right:0;height:24px;
+      background-image: radial-gradient(circle at 2% 50%, rgba(0,0,0,0.02) 0 2px, transparent 3px),
+                        radial-gradient(circle at 10% 50%, rgba(0,0,0,0.02) 0 2px, transparent 3px),
+                        radial-gradient(circle at 18% 50%, rgba(0,0,0,0.02) 0 2px, transparent 3px),
+                        radial-gradient(circle at 26% 50%, rgba(0,0,0,0.02) 0 2px, transparent 3px);
+      opacity:0.6;
+      transform:translateY(-8px) scaleY(1.1);
+      pointer-events:none;
+    }
+
+    .card h2{
+      font-family:'Playfair Display', serif;
+      font-size:20px;
+      margin:0 0 8px 0;
+      color:#2b2b2b;
+    }
+    .card p{
+      margin:0 0 12px 0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.5;
+    }
+
+    .meta{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      margin-top:8px;
+    }
+    .badge{
+      padding:6px 10px;
+      font-size:13px;
+      border-radius:999px;
+      background:linear-gradient(180deg,#fff,#f6f3fb);
+      border:1px solid rgba(0,0,0,0.04);
+      color:var(--muted);
+      box-shadow:inset 0 -2px 0 rgba(0,0,0,0.02);
+    }
+
+    /* 小裝飾花瓣，右下角 */
+    .deco{
+      position:absolute;
+      right:10px;
+      bottom:8px;
+      width:72px;height:72px;
+      opacity:0.08;
+      transform:rotate(-18deg);
+      background:radial-gradient(circle at 30% 30%, #f8eef9 0 30%, transparent 31%),
+                 radial-gradient(circle at 70% 70%, #fff6f8 0 30%, transparent 31%);
+      border-radius:50%;
+      pointer-events:none;
+    }
+
+    footer{
+      text-align:center;
+      margin-top:22px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* 輕微的分隔線，像是蕾絲縫線 */
+    .stitch{
+      height:1px;
+      background:repeating-linear-gradient(90deg,#f1eaf6 0 6px, transparent 6px 12px);
+      margin:18px 0;
+      border-radius:2px;
+    }
+
+    .artworks {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin: 12px 0 0 0;
+      justify-content: flex-start;
+    }
+    .artworks figure {
+      margin: 0;
+      text-align: center;
+      width: 120px;
+    }
+    .artworks figcaption {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 4px;
+      letter-spacing: 0.5px;
+    }
+
+  </style>
+</head>
+<body>
+  <main class="portfolio-wrap" role="main">
+    <header>
+      <div style="font-size:12px;color:#9b8ea0;letter-spacing:2px">PORTFOLIO</div>
+      <h1>GiGi&rsquo;s Artwork</h1>
+      <div class="tagline">精緻白色蕾絲風格 • 插畫與角色設計作品集</div>
+    </header>
+
+    <section class="grid" aria-label="作品區塊">
+
+      <article class="card" id="section-1">
+        <div class="lace-edge" aria-hidden="true"></div>
+        <div>
+          <h2>音遊同人二創</h2>
+          <p>收錄以節奏遊戲與音樂同人為主題的二創作品，包含角色再設計、場景概念、單曲封面與活動宣傳插畫。</p>
+          <div class="artworks">
+            <figure>
+              <img src="../1007/pic1.jpg" alt="中二企鵝頭盔" loading="lazy" style="border-radius:8px;box-shadow:0 2px 8px #eaeaea;width:100%;max-width:120px;">
+              <figcaption>中二企鵝頭盔</figcaption>
+            </figure>
+            <figure>
+              <img src="../1007/pic2.webp" alt="MAIMAI筆筒" loading="lazy" style="border-radius:8px;box-shadow:0 2px 8px #eaeaea;width:100%;max-width:120px;">
+              <figcaption>MAIMAI筆筒</figcaption>
+            </figure>
+            <figure>
+              <img src="../1007/pic3.webp" alt="百合咲吊飾" loading="lazy" style="border-radius:8px;box-shadow:0 2px 8px #eaeaea;width:100%;max-width:120px;">
+              <figcaption>百合咲吊飾</figcaption>
+            </figure>
+            <figure>
+              <img src="../1014/111415025.JPG" alt="其他插畫作品" loading="lazy" style="border-radius:8px;box-shadow:0 2px 8px #eaeaea;width:100%;max-width:120px;">
+              <figcaption>其他插畫作品</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="meta">
+          <span class="badge">插畫 / 二創</span>
+          <small style="color:var(--muted)">更新：2025</small>
+        </div>
+        <div class="deco" aria-hidden="true"></div>
+      </article>
+
+      <article class="card" id="section-2">
+        <div class="lace-edge" aria-hidden="true"></div>
+        <div>
+          <h2>動漫角色插圖</h2>
+          <p>以動漫風格為主的角色插圖集，擅長表情、動態與服裝細節，呈現人物性格與故事感。</p>
+        </div>
+        <div class="meta">
+          <span class="badge">角色 / 插圖</span>
+          <small style="color:var(--muted)">尺寸：高解析度</small>
+        </div>
+        <div class="deco" aria-hidden="true"></div>
+      </article>
+
+      <article class="card" id="section-3">
+        <div class="lace-edge" aria-hidden="true"></div>
+        <div>
+          <h2>原創角色設計</h2>
+          <p>原創角色設計與人物設定，包括角色設定表、色票、造型細節與可動性考量，適合故事、遊戲或企劃使用。</p>
+        </div>
+        <div class="meta">
+          <span class="badge">原創 / 設計</span>
+          <small style="color:var(--muted)">含設定集</small>
+        </div>
+        <div class="deco" aria-hidden="true"></div>
+      </article>
+
+      <article class="card" id="section-4">
+        <div class="lace-edge" aria-hidden="true"></div>
+        <div>
+          <h2>繪圖帳號</h2>
+          <p>想看更多作品與創作過程可以追蹤我的繪圖帳號：Instagram / Twitter / Pixiv（連結與作品集會在此更新）。</p>
+        </div>
+        <div class="meta">
+          <span class="badge">社群</span>
+          <small style="color:var(--muted)">追蹤更新</small>
+        </div>
+        <div class="deco" aria-hidden="true"></div>
+      </article>
+
+    </section>
+
+    <div class="stitch" aria-hidden="true"></div>
+
+    <footer>
+      <div>© GiGi&rsquo;s Artwork — All artworks by GiGi</div>
+    </footer>
+  </main>
+</body>
+</html>
