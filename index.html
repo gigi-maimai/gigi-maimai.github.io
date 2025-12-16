@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>分頁連結區塊展示</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #ffe0f0 0%, #ffd6ec 100%);
+      color: #b94e7c;
+      padding: 2em;
+      min-height: 100vh;
+    }
+    h1 {
+      text-align: center;
+      color: #ff69b4;
+      font-size: 2em;
+      margin-bottom: 1.5em;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 8px #fff0fa;
+    }
+    .link-block {
+      background: #fff0fa;
+      border: 2.5px solid #ffb6d5;
+      border-radius: 18px;
+      margin: 1.5em auto;
+      padding: 1.5em 1.5em 1.2em 1.5em;
+      box-shadow: 0 4px 16px #ffb6d555, 0 1.5px 0 #fff8fc inset;
+      max-width: 420px;
+      transition: transform 0.15s, box-shadow 0.15s;
+      position: relative;
+    }
+    .link-block:hover {
+      transform: translateY(-4px) scale(1.03) rotate(-1deg);
+      box-shadow: 0 8px 32px #ffb6d599, 0 1.5px 0 #fff8fc inset;
+    }
+    .link-block h2 {
+      margin: 0 0 0.7em 0;
+      color: #ff69b4;
+      font-size: 1.3em;
+      letter-spacing: 1px;
+      text-shadow: 0 1px 6px #fff0fa;
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+    }
+    .link-block h2::before {
+      content: '❤';
+      color: #ffb6d5;
+      font-size: 1.1em;
+    }
+    .link-block a {
+      color: #e75480;
+      font-size: 1.08em;
+      word-break: break-all;
+      background: #fff6fa;
+      padding: 0.3em 0.7em;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 1px 4px #ffb6d522 inset;
+      transition: background 0.2s, color 0.2s;
+    }
+    .link-block a:hover {
+      background: #ffe0f0;
+      color: #b94e7c;
+      text-decoration: underline wavy #ffb6d5;
+    }
+  </style>
+</head>
+<body>
+  <h1>111415025 蔡宜珍</h1>
+  <div class="link-block">
+    <h2>1007</h2>
+    <a href="https://gigi-maimai.github.io/1007/index.html" target="_blank">https://gigi-maimai.github.io/1007/index.html</a>
+  </div>
+  <div class="link-block">
+    <h2>1014</h2>
+    <a href="https://gigi-maimai.github.io/1014/index.html" target="_blank">https://gigi-maimai.github.io/1014/index.html</a>
+  </div>
+  <div class="link-block">
+    <h2>1104</h2>
+    <a href="https://gigi-maimai.github.io/1104/index.html" target="_blank">https://gigi-maimai.github.io/1104/index.html</a>
+  </div>
+  <div class="link-block">
+    <h2>1118</h2>
+    <a href="https://gigi-maimai.github.io/1118/index.html" target="_blank">https://gigi-maimai.github.io/1118/index.html</a>
+  </div>
+  <div class="link-block">
+    <h2>1209</h2>
+    <a href="https://gigi-maimai.github.io/1209/index.html" target="_blank">https://gigi-maimai.github.io/1209/index.html</a>
+  </div>
+  <div class="link-block">
+    <h2>20250930</h2>
+    <a href="https://gigi-maimai.github.io/20250930/index.html" target="_blank">https://gigi-maimai.github.io/20250930/index.html</a>
+  </div>
+</body>
+</html>
