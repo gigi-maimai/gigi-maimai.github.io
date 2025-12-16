@@ -1,80 +1,128 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>表格 × 圖片練習｜Starter</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0930-網站設計與賞析</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f9f9f9; }
+        h1 { color: #2c3e50; }
+        p { color: #555; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 10px; text-align: left; border: 1px solid #ddd; }
+        th { background-color: #f2f2f2; }
+    </style>
 </head>
 <body>
-  <h1>表格 × 圖片練習</h1>
-  <p class="subtitle">目標：熟悉 <span class="code">&lt;table&gt;</span>、合併儲存格（colspan/rowspan）、替代文字（alt）、圖片大小與標題對齊。</p>
-
-  <div class="note">
-    <strong>任務說明：</strong>請把下方「旅行相片一覽」做成一個整齊的圖文表格。<br>
-    1) 每張圖片下方要有標題（地點＋主題）；2) 第一列放分類標籤；3) 用 <span class="code">colspan</span> 或 <span class="code">rowspan</span> 做出至少一次的合併；4) 為每張圖片寫合適的 <span class="code">alt</span>；5) 讓表格在手機上也能水平滾動查看。
-  </div>
-
-  <div style="overflow-x:auto;">
-    <table border="1" style="min-width:600px; border-collapse:collapse;">
-      <thead>
+    <h1>唐詩三百首</h1>
+    <table border="1" cellpadding="10" style="border-collapse: collapse; background: #fff;">
         <tr>
-          <th>分類</th>
-          <th>縮圖</th>
-          <th>標題與描述</th>
-          <th>拍攝日期</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td rowspan="2">城市風景</td>
-          <td>
-            <a href="images/river_sunset.png" target="_blank">
-              <img src="pic1.jpg" alt="傍晚河岸與城市天際線倒影" width="480" height="320">
-            </a>
-          </td>
-          <td>
-            <strong>河畔夕照</strong><br>
-            金色陽光灑在河面，倒映城市天際線。
-          </td>
-          <td>2025-09-01</td>
+            <th>詩人</th>
+            <th>詩名</th>
+            <th>內容</th>
+            <th>圖片</th>
         </tr>
         <tr>
-          <td>
-            <a href="images/night_street.png" target="_blank">
-              <img src="pic2.webp" alt="傍晚河岸與城市天際線倒影" width="480" height="320">
-            </a>
-          </td>
-          <td>
-            <strong>夜色小徑</strong><br>
-            街角咖啡店透出溫暖光暈。
-          </td>
-          <td>2025-09-02</td>
+            <td>李白</td>
+            <td>黃鶴樓送孟浩然之廣陵</td>
+            <td>
+                故人西辭黃鶴樓，煙花三月下揚州。<br>
+                孤帆遠影碧空盡，惟見長江天際流。
+            </td>
+            <td><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="黃鶴樓送孟浩然之廣陵意境" width="80"></td>
         </tr>
         <tr>
-          <td colspan="4" style="text-align:center; font-weight:bold; background:#f0f0f0;">
-            海邊旅行
-          </td>
+            <td>柳宗元</td>
+            <td>江雪</td>
+            <td>
+                千山鳥飛絕，萬徑人蹤滅。<br>
+                孤舟蓑笠翁，獨釣寒江雪。
+            </td>
+            <td><img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="江雪意境" width="80"></td>
         </tr>
         <tr>
-          <td>自然風景</td>
-          <td>
-            <a href="images/beach_morning.png" target="_blank">
-              <img src="pic3.webp" alt="傍晚河岸與城市天際線倒影" width="480" height="320">
-            </a>
-          </td>
-          <td>
-            <strong>清晨海浪</strong><br>
-            第一道陽光照亮浪花與沙粒。
-          </td>
-          <td>2025-09-03</td>
+            <td>李白</td>
+            <td>早發白帝城 (下江陵)</td>
+            <td>
+                朝辭白帝彩雲間，千里江陵一日還。<br>
+                兩岸猿聲啼不住，輕舟已過萬重山。
+            </td>
+            <td><img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=400&q=80" alt="早發白帝城意境" width="80"></td>
         </tr>
-      </tbody>
+        <tr>
+            <td>王維</td>
+            <td>相思</td>
+            <td>
+                紅豆生南國，春來發幾枝？<br>
+                願君多采擷，此物最相思。
+            </td>
+            <td><img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="相思意境" width="80"></td>
+        </tr>
+        <tr>
+            <td>李白</td>
+            <td>靜夜思</td>
+            <td>
+                床前明月光，疑是地上霜。<br>
+                舉頭望明月，低頭思故鄉。
+            </td>
+            <td><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80" alt="靜夜思意境" width="80"></td>
+        </tr>
+        <tr>
+            <td>李白</td>
+            <td>獨坐敬亭山</td>
+            <td>
+                眾鳥高飛盡，孤雲獨去閒。<br>
+                相看兩不厭，只有敬亭山。
+            </td>
+            <td><img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=400&q=80" alt="敬亭山意境" width="80"></td>
+        </tr>
+        <tr>
+            <td>李白</td>
+            <td>登金陵鳳凰臺</td>
+            <td>
+                鳳凰臺上鳳凰遊，鳳去臺空江自流。<br>
+                吳宮花草埋幽徑，晉代衣冠成古丘。<br>
+                三山半茖青天外，二水中分白鷺洲。<br>
+                總為浮雲能蔽日，長安不見使人愁。
+            </td>
+            <td><img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=400&q=80" alt="鳳凰臺意境" width="80"></td>
+        </tr>
+        <tr>
+            <td>李商隱</td>
+            <td>登樂遊原</td>
+            <td>
+                向晚意不適，驅車登古原。<br>
+                夕陽無限好，只是近黃昏。
+            </td>
+            <td><img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="樂遊原意境" width="80"></td>
+        </tr>
+        <tr>
+            <td>王之渙</td>
+            <td>涼州詞</td>
+            <td>
+                黃河遠上白雲間，一片孤城萬仞山。<br>
+                羌笛何須怨楊柳？春風不度玉門關。
+            </td>
+            <td><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="涼州詞意境" width="80"></td>
+        </tr>
+        <tr>
+            <td>杜甫</td>
+            <td>江南逢李龜年</td>
+            <td>
+                岐王宅裡尋常見，崔九堂前幾度聞。<br>
+                正是江南好風景，落花時節又逢君。
+            </td>
+            <td><img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="江南逢李龜年意境" width="80"></td>
+        </tr>
+        <tr>
+            <td>李商隱</td>
+            <td>夜雨寄北</td>
+            <td>
+                君問歸期未有期，巴山夜雨漲秋池。<br>
+                何當共翦西窗燭，卻話巴山夜雨時。
+            </td>
+            <td><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80" alt="夜雨寄北意境" width="80"></td>
+        </tr>
     </table>
-  </div>
-
-  <div class="footer">
-    小提示：圖片請使用相對路徑 <span class="code">images/檔名.png</span>；若要更換圖片，把新檔案放進 <span class="code">images</span> 資料夾並更新 <span class="code">src</span> 與 <span class="code">alt</span>。
-  </div>
 </body>
 </html>
